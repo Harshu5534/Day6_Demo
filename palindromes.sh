@@ -16,9 +16,9 @@ function palindrome
 	echo $reverse
 	if [ $number -eq $reverse ]
 	then
-		echo " Number is Palindrome ";
+		echo " Number is Palindrome. ";
 	else
-		echo " Number is not Palindrome ";
+		echo " Number is not Palindrome. ";
 	fi
 }
 r=` palindrome $n `
