@@ -9,17 +9,17 @@ function palindrome
 	reverse=0;
 	while [ $n -gt 0 ]
 	do
-		a=($n%10);
-		n=($n/10);
-		reverse=($reverse \* 10 + $a );
+		a=` expr $n % 10 `
+		n=` expr $n / 10 `
+		reverse=` expr $reverse \* 10 + $a `
 	done
 	echo $reverse
 	if [ $number -eq $reverse ]
 	then
-		echo " Number is Palindrome ";
+		echo " Number is Palindrome. ";
 	else
-		echo " Number is not Palindrome ";
+		echo " Number is not Palindrome. ";
 	fi
 }
-B=( palindrome $n )
-echo " $B "
+r=` palindrome $n `
+echo " $r "
