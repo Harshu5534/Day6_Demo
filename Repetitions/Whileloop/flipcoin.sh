@@ -1,18 +1,20 @@
 #!/bin/bash -x
 
-Result=0;
+HeadCount=0;
+TailCount=o;
 
-while [ $Result -lt 12 ]
+while [[ $HeadCount -ne 11 && $TailCount -ne 11 ]]
 do
-	cnt=$((RANDOM%2))
-	if [ $cnt -eq 1 ]
+	Coin=$((RANDOM%2));
+	if [ $Coin -eq 0 ]
 	then
-		echo "Head";
+		echo "Head Wins";
+		((HeadCount++));
 	else
-		echo "Tails";
+		echo "Tail Wins";
+		((TailCount++));
 	fi
-	echo $Result;
-	((Result++));
-
 done
 
+echo "Head Won : $HeadCount Times";
+echo "Tail Won : $TailCount Times";
