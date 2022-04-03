@@ -1,6 +1,12 @@
 #!/bin/bash -x
-sum=1+1/n;
-for(( i=1 i<=n i++ ))
+read -p "Enter a number: " num;
+
+fv=1;
+
+for (( i=1;i<=num;i++ ))
 do
-	echo $sum;
+	value=`echo $fv $i | awk '{print $1/$2}'`;
+	harm=`echo $harm $value | awk '{print $1+$2}'`;
 done
+
+echo "harmonic number is: " $harm;
