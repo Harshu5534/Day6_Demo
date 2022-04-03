@@ -1,17 +1,17 @@
 #!/bin/bash -x
 
-echo "Enter the number : ";
-read n;
+read -p "Enter the number : " n;
 
 function palindrome
 {
-	number=$n;
+	x=0;
 	reverse=0;
-	while [ $n -gt 0 ]
+	number=$n;
+	while [ $n -ne 0 ]
 	do
-		a=` expr $n % 10 `
-		n=` expr $n / 10 `
-		reverse=` expr $reverse \* 10 + $a `
+		x=$(( $n % 10 ))
+		reverse=$(( reverse*10+x ))
+		n=$(( $n / 10 ))
 	done
 	echo $reverse
 	if [ $number -eq $reverse ]
@@ -21,5 +21,5 @@ function palindrome
 		echo " Number is not Palindrome. ";
 	fi
 }
-r=` palindrome $n `
-echo " $r "
+Number=`palindrome $n`
+echo "$Number"
