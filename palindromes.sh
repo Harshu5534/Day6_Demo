@@ -22,4 +22,4 @@ function palindrome
 	fi
 }
 Number=`palindrome $n`
-echo "$Number"
+echo " $Number "
