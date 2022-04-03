@@ -23,3 +23,4 @@ function palindrome
 }
 Number=`palindrome $n`
 echo " $Number "
+
