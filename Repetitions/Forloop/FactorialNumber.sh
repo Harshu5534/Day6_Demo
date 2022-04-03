@@ -7,4 +7,4 @@ for(( i=2;i<=$Num;i++))
 do
 	Fact=$(( Fact * i ));
 done
-echo "Fctorial Number is : "$Fact;
+echo "Factorial Number is : "$Fact;
